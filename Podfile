@@ -4,8 +4,10 @@
 target 'ToDo' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
-  # Pods for ToDo
+  
+#  pod 'Alamofire', '~> 4.0.0'
+#  pod 'SwiftyJSON', '~> 5.0.0'
+  pod 'Swinject', '2.6.0'
 
   target 'ToDoTests' do
     inherit! :search_paths
