@@ -8,11 +8,28 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+public class ViewController: UIViewController {
+    var toDoItems: [String] = []
+    
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        <#code#>
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        <#code#>
+//    }
+    
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
+        getToDoItems()
         // Do any additional setup after loading the view.
+        
+    }
+    
+    public func getToDoItems() {
+        //get to do items from repo
+        self.toDoItems = ["walk dog", "eat", "code"]
     }
 
 
