@@ -30,5 +30,9 @@ class ToDoTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testGetsDataFromBackEnd() {
+        let toDoItem = ToDoItem()
+    }
 
 }
