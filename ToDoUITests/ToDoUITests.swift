@@ -1,35 +1,35 @@
+//import XCTest
+//import XCTest_Gherkin
+//@testable import ToDo
 //
-//  ToDoUITests.swift
-//  ToDoUITests
+//class ToDoAcceptanceTests: XCTestCase {
+//    func testBasicSteps() {
+//        Given("I have a default list of tasks")
+//        When("I start the app")
+//        Then("I should see the default tasks")
+//    }
+//}
 //
-//  Created by zachary.j.valentine on 5/23/19.
-//  Copyright © 2019 zachary.j.valentine. All rights reserved.
+//class StepDefinitions: StepDefiner {
+//    override func defineSteps() {
+//        step("I have a default list of tasks") {
+//            let viewController = ViewController()
+//            viewController.toDoItems = buildDefaultTaskList()
+//        }
+//        step("I start the app") {
 //
-
-import XCTest
-
-class ToDoUITests: XCTestCase {
-
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        XCTAssertEqual("test", "test")
-    }
-
-}
+//        }
+//        step("I should see the default tasks") {
+//
+//        }
+//    }
+//
+//
+//    func buildDefaultTaskList() -> [ToDoItem] {
+//        var firstItem = ToDoItem()
+//        var secondItem = ToDoItem()
+//        var thirdItem = ToDoItem()
+//        let defaultList: [ToDoItem] = [firstItem, secondItem, thirdItem]
+//        return defaultList
+//    }
+//}
