@@ -8,13 +8,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        if let viewController = window?.rootViewController as? ViewController
+        {
+            viewController.toDoService = ToDoService()
+        }
         
-        let service = ToDoService()
-        let viewController = ViewController(service: service)
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = viewController
-        window.makeKeyAndVisible()
-        self.window = window
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//
+//        //let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let service = ToDoService()
+//        let initialViewController = ViewController(service: service)
+//
+//        self.window?.rootViewController = initialViewController
+//        self.window?.makeKeyAndVisible()
         
         return true
     }

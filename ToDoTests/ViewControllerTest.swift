@@ -2,23 +2,28 @@ import XCTest
 @testable import ToDo
 
 class ViewControllerTest: XCTestCase {
-    var vc: ViewController!
+    var controller: ViewController!
     var window: UIWindow!
     
     override func setUp() {
         super.setUp()
         window = UIWindow()
         let mockService = MockToDoService()
-        vc = ViewController(service: mockService)
         
-        window.addSubview(vc.view)
+        let storyboard = UIStoryboard(name: "Main",
+                                      bundle: Bundle.main)
+        controller = storyboard.instantiateInitialViewController() as! ViewController
+        
+        controller.toDoService = mockService
+        
+        window.addSubview(controller.view)
     }
     
     override func tearDown() {
     }
     
     func testOnLoadGetsToDoItems() {
-        XCTAssertTrue(vc.toDoItems.count == 3)
+        XCTAssertTrue(controller.toDoItems.count == 3)
     }
     
 }

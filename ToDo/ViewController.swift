@@ -1,30 +1,34 @@
 import UIKit
 
-public class ViewController: UIViewController {
-    var toDoService: ToDoServiceProtocol
+public class ViewController: UIViewController, UITableViewDataSource {
+    var toDoService: ToDoServiceProtocol?
     var toDoItems: [ToDoItem] = []
     
-    init(service: ToDoServiceProtocol){
-        self.toDoService = service
-        super.init(nibName: nil, bundle: nil)
+    @IBOutlet weak var tableView: UITableView!
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return toDoItems.count
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        tableView.dataSource = self;
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        cell.textLabel!.text = toDoItems[indexPath.row].title
+        
+        return cell
     }
-    
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        <#code#>
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        <#code#>
-//    }
     
     override public func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        toDoItems = toDoService.getToDoItems()
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        //this will hide extra empty cells
+        self.tableView.tableFooterView = UIView()
+        tableView.dataSource = self
+        
+        toDoItems = (toDoService?.getToDoItems())!
     }
 }
 

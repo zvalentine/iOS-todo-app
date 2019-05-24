@@ -5,6 +5,6 @@ struct ToDoService : ToDoServiceProtocol {
     
     func getToDoItems() -> [ToDoItem] {
         //real implementation here
-        return [ToDoItem(title: "")]
+        return [ToDoItem(title: "walk dog"), ToDoItem(title: "eat"), ToDoItem(title: "code")]
     }
 }
