@@ -2,34 +2,23 @@ import XCTest
 @testable import ToDo
 
 class ViewControllerTest: XCTestCase {
-    var viewController: ToDo.ViewController!
+    var vc: ViewController!
+    var window: UIWindow!
+    
     override func setUp() {
         super.setUp()
+        window = UIWindow()
+        let mockService = MockToDoService()
+        vc = ViewController(service: mockService)
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        //        let navigationController = storyboard.instantiateInitialViewController() as! UINavigationController
-        //        viewController = (navigationController.topViewController as! ViewController)
-        //
-        //        UIApplication.shared.keyWindow!.rootViewController = viewController
-        
-        viewController = (storyboard.instantiateViewController(withIdentifier: "ViewController")) as! ToDo.ViewController
-        
-        
-        
-        //viewController.toDoItems = toDoItems
-        
-        // The One Weird Trick!
-        //let _ = navigationController.view
-        //let _ = viewController.view
+        window.addSubview(vc.view)
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
     func testOnLoadGetsToDoItems() {
-        viewController.getToDoItems()
-        XCTAssertEqual(viewController.toDoItems.count, 3)
+        XCTAssertTrue(vc.toDoItems.count == 3)
     }
     
 }
