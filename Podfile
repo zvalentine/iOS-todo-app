@@ -8,6 +8,7 @@ target 'ToDo' do
 #  pod 'Alamofire', '~> 4.0.0'
 #  pod 'SwiftyJSON', '~> 5.0.0'
   pod 'Swinject', '2.6.0'
+  pod 'Alamofire'
 
   target 'ToDoTests' do
     inherit! :search_paths

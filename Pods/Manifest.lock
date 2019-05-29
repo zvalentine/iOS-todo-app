@@ -1,22 +1,26 @@
 PODS:
+  - Alamofire (4.8.2)
   - Swinject (2.6.0)
   - XCTest-Gherkin (0.18.0):
     - XCTest-Gherkin/Core (= 0.18.0)
   - XCTest-Gherkin/Core (0.18.0)
 
 DEPENDENCIES:
+  - Alamofire
   - Swinject (= 2.6.0)
   - XCTest-Gherkin
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - Swinject
     - XCTest-Gherkin
 
 SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Swinject: 48a96cda93633cf2860697b4ce76ab5db9ebaca2
   XCTest-Gherkin: dcd08cf80c456c46edc7a1cfb18d3a8f4fa3293c
 
-PODFILE CHECKSUM: ad74e7a72b6bcf2f46c9ab483b3b1354c36fbc79
+PODFILE CHECKSUM: a3fd5f6faf9022ddd2c99c38ee342648ff4d33a6
 
 COCOAPODS: 1.7.0
