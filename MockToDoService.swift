@@ -1,7 +1,11 @@
+import Foundation
+
 class MockToDoService: ToDoServiceProtocol {
+    func saveToDoItem(toDoItem: ToDoItem) {
+    }
+    
     init() {}
     
-    func getToDoItems() -> [ToDoItem] {
-        return [ToDoItem(title: "walk dog"), ToDoItem(title: "eat"), ToDoItem(title: "code")]
+    func getToDoItems(completionHandler: @escaping (Data?) -> (Void)) {
     }
 }
