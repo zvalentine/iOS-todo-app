@@ -8,4 +8,7 @@ class MockToDoService: ToDoServiceProtocol {
     
     func getToDoItems(completionHandler: @escaping (Data?) -> (Void)) {
     }
+    
+    func updateToDoItem(toDoItem: ToDoItem) -> Void {
+    }
 }

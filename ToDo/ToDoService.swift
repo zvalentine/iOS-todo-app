@@ -10,6 +10,12 @@ struct ToDoService : ToDoServiceProtocol {
         HttpHandler.getJson(urlString: todoEndpoint, completionHandler: completionHandler)
     }
     
+    func updateToDoItem(toDoItem: ToDoItem) -> Void {
+        let todoEndpoint: String = "http://localhost:3000/todos/\(toDoItem._id)"
+        
+        HttpHandler.sendPut(urlString: todoEndpoint, toDoItem: toDoItem)
+    }
+    
     func saveToDoItem(toDoItem: ToDoItem) -> Void {
         let todoEndpoint: String = "http://localhost:3000/todos/"
         
