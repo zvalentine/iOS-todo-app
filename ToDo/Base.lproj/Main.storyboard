@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SgM-LI-YRS"/>
+                        <segue destination="JQX-Ma-vJL" kind="relationship" relationship="rootViewController" id="Vjn-iK-frp"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ysM-eo-LC6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1522" y="120"/>
+            <point key="canvasLocation" x="-1532" y="548"/>
         </scene>
-        <!--To Do Items-->
+        <!--Tasks Remaining-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
@@ -42,31 +42,79 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KNK-j4-Hgr">
-                                <rect key="frame" x="20" y="133" width="374" height="644"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="631"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNh-UL-3xj">
-                                <rect key="frame" x="302" y="785" width="92" height="77"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9H-uj-jjE">
+                                <rect key="frame" x="344" y="739" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="95"/>
-                                <state key="normal" title="+"/>
+                                <state key="normal" title="Button" image="plusIcon"/>
                                 <connections>
-                                    <segue destination="Jit-rG-Dx4" kind="show" id="MDs-I4-cVu"/>
+                                    <segue destination="Jit-rG-Dx4" kind="show" id="7qj-C8-iE7"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="To Do Items" id="VA3-wl-EVU"/>
+                    <tabBarItem key="tabBarItem" title="Tasks Remaining" id="Yyb-5S-xJI"/>
+                    <navigationItem key="navigationItem" id="VA3-wl-EVU"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addTaskButton" destination="B9H-uj-jjE" id="JeT-PX-6Ww"/>
                         <outlet property="tableView" destination="KNK-j4-Hgr" id="HuG-3X-Qkw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-604.34782608695662" y="119.86607142857142"/>
+            <point key="canvasLocation" x="386.95652173913044" y="-210.26785714285714"/>
+        </scene>
+        <!--Completed Tasks-->
+        <scene sceneID="bvj-rt-m7o">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uaj-PX-aLR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="xIl-u2-Uvx" customClass="CompletedTasksViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7KZ-VI-b6q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ycm-gO-2sz">
+                                <rect key="frame" x="0.0" y="148" width="414" height="595"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ZEO-8i-Egh"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Completed Tasks" id="5XV-5e-6ms"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="ycm-gO-2sz" id="RaN-qh-bvG"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="386.95652173913044" y="658.92857142857144"/>
+        </scene>
+        <!--Tasks-->
+        <scene sceneID="hko-QM-my5">
+            <objects>
+                <tabBarController id="JQX-Ma-vJL" customClass="ToDoStatusNavigator" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Tasks" id="cIE-ds-90S"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cl6-ce-H9J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ZaQ-3X-baZ"/>
+                        <segue destination="xIl-u2-Uvx" kind="relationship" relationship="viewControllers" id="w0I-st-ijt"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kLJ-UA-8H6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-622" y="548"/>
         </scene>
         <!--Create To Do View Controller-->
         <scene sceneID="pSE-4f-cXa">
@@ -90,18 +138,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BpX-bo-eRb">
-                                <rect key="frame" x="145" y="654" width="125" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.67012090803428015" green="0.088277804751410768" blue="0.16139070736812824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Submit">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" red="0.57167531217935785" green="0.10108694331964224" blue="0.11490962193826576" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="submitButton:" destination="Jit-rG-Dx4" eventType="touchUpInside" id="NI0-2E-i6G"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mAk-c1-rNE">
                                 <rect key="frame" x="20" y="243" width="374" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -109,10 +145,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BpX-bo-eRb">
+                                <rect key="frame" x="269" y="728" width="125" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.67012090803428015" green="0.088277804751410768" blue="0.16139070736812824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Add Task">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.57167531217935785" green="0.10108694331964224" blue="0.11490962193826576" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButton:" destination="Jit-rG-Dx4" eventType="touchUpInside" id="NI0-2E-i6G"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="wbp-DL-V6G"/>
                     </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="descriptionInput" destination="mAk-c1-rNE" id="E7y-3f-ZmU"/>
                         <outlet property="titleInput" destination="ncf-ed-pPH" id="tg2-Nd-dPQ"/>
@@ -120,7 +169,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wni-IL-iPX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="298.55072463768118" y="-151.33928571428569"/>
+            <point key="canvasLocation" x="1339" y="-210"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plusIcon" width="50" height="50"/>
+    </resources>
 </document>

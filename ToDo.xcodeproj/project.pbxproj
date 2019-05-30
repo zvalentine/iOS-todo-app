@@ -24,6 +24,8 @@
 		76440717229DB0C40043B397 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76440716229DB0C40043B397 /* JSONParser.swift */; };
 		76440719229DBD940043B397 /* CreateToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76440718229DBD940043B397 /* CreateToDoViewController.swift */; };
 		76558772229ED8A600AC1EA3 /* ToastExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76558771229ED8A600AC1EA3 /* ToastExtension.swift */; };
+		76558774229F0B2A00AC1EA3 /* ToDoStatusNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76558773229F0B2A00AC1EA3 /* ToDoStatusNavigator.swift */; };
+		76558778229F17DD00AC1EA3 /* CompletedTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76558777229F17DD00AC1EA3 /* CompletedTasksViewController.swift */; };
 		C614138A93F8FCC599096E9F /* Pods_ToDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC56BC38283FF6F178DA4F3 /* Pods_ToDo.framework */; };
 		CFB42FEB0B5073D45F5C6F51 /* Pods_ToDoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21D1FE05A50A67BD3D6D9AAB /* Pods_ToDoUITests.framework */; };
 /* End PBXBuildFile section */
@@ -74,6 +76,8 @@
 		76440716229DB0C40043B397 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		76440718229DBD940043B397 /* CreateToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateToDoViewController.swift; sourceTree = "<group>"; };
 		76558771229ED8A600AC1EA3 /* ToastExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastExtension.swift; sourceTree = "<group>"; };
+		76558773229F0B2A00AC1EA3 /* ToDoStatusNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoStatusNavigator.swift; sourceTree = "<group>"; };
+		76558777229F17DD00AC1EA3 /* CompletedTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTasksViewController.swift; sourceTree = "<group>"; };
 		9D4F06097EB01A0387732CD3 /* Pods-ToDoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoTests.release.xcconfig"; path = "Target Support Files/Pods-ToDoTests/Pods-ToDoTests.release.xcconfig"; sourceTree = "<group>"; };
 		CF78968D29BDC957D0F9843F /* Pods-ToDoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoUITests.release.xcconfig"; path = "Target Support Files/Pods-ToDoUITests/Pods-ToDoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F6EBC1CCBDD8893D3F5D9AC8 /* Pods-ToDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo.release.xcconfig"; path = "Target Support Files/Pods-ToDo/Pods-ToDo.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 				76440716229DB0C40043B397 /* JSONParser.swift */,
 				76440718229DBD940043B397 /* CreateToDoViewController.swift */,
 				76558771229ED8A600AC1EA3 /* ToastExtension.swift */,
+				76558773229F0B2A00AC1EA3 /* ToDoStatusNavigator.swift */,
+				76558777229F17DD00AC1EA3 /* CompletedTasksViewController.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -432,7 +438,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AF89EBA2296EE0A00C7B1D8 /* ViewController.swift in Sources */,
+				76558774229F0B2A00AC1EA3 /* ToDoStatusNavigator.swift in Sources */,
 				76440715229DAF0F0043B397 /* HttpHandler.swift in Sources */,
+				76558778229F17DD00AC1EA3 /* CompletedTasksViewController.swift in Sources */,
 				76440717229DB0C40043B397 /* JSONParser.swift in Sources */,
 				2AF89EB82296EE0A00C7B1D8 /* AppDelegate.swift in Sources */,
 				2AD90AAA229739C10022E771 /* ToDoService.swift in Sources */,
